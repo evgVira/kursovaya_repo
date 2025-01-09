@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8088
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5434/minio_db
@@ -8,14 +8,14 @@ spring:
   jpa:
     database: postgresql
     database-platform: org.hibernate.dialect.PostgreSQLDialect
-#    show-sql: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
 minio:
   login: minioadmin
   password: minioadmin
   url: http://localhost:9000
   bucket: first-bucket
-#logging:
-#  level:
-#    root: info
-#    org.hibernate.SQL: debug
 

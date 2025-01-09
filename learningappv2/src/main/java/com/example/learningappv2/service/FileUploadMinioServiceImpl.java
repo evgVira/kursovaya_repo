@@ -34,8 +34,6 @@ public class FileUploadMinioServiceImpl implements FileUploadMinioService {
 
     private final FileEntityRepository fileEntityRepository;
 
-    private final int THREADS_COUNT = 10;
-
     @Value("${minio.bucket}")
     private String minioBucketName;
 
