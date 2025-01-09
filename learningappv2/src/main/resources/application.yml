@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5434/minio_db
+    username: user
+    password: password
+  jpa:
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+#    show-sql: true
+minio:
+  login: minioadmin
+  password: minioadmin
+  url: http://localhost:9000
+  bucket: first-bucket
+#logging:
+#  level:
+#    root: info
+#    org.hibernate.SQL: debug
+
